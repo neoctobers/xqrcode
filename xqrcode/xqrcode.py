@@ -10,7 +10,7 @@ def decode_from_url(url: str):
     ir = requests.get(url)
     if ir.status_code == 200:
         # path/to/temporary_file
-        path_to_file = os.path.join(tempfile.gettempdir(), 'xqrcode-{}'.format(md5(url)))
+        path_to_file = os.path.join(tempfile.gettempdir(), 'xqrcode-{}'.format(__md5(url)))
 
         # save temporary_file
         with open(path_to_file, 'wb') as f:
@@ -49,7 +49,7 @@ def decode_from_file(path_to_file: str):
     return r
 
 
-def md5(s: str):
+def __md5(s: str):
     import hashlib
 
     f = hashlib.md5()

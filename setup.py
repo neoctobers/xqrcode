@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="xqrcode",
-    version="1.0.0",
+    version="1.0.1",
     author="@neoctobers",
     author_email="neoctobers@gmail.com",
     description="A simply QR-code decoder, from URL or a file.",
